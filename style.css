@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+}
+
+#screen {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /*width: 1200px;
+    height: 675px;*/
+
+    background:
+    radial-gradient(circle at 0% 0%, #16364C, transparent 60%),
+    radial-gradient(circle at 100% 0%, #16364C, transparent 60%),
+    radial-gradient(circle at 0% 100%, #477B82, transparent 60%),
+    radial-gradient(circle at 100% 100%, #477B82, transparent 60%),
+    radial-gradient(circle at 50% 50%, #477B82, transparent 60%);
+
+    border-radius: 40px;
+    background-color: #3573A8;
+}
