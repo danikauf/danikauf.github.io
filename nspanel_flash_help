@@ -1,0 +1,53 @@
+Step 1:
+Kopiere diese Config, passe das Wifi Zeugs an und installiere sie auf das Panel.
+Das ist eine uralte Version aber sollte durchlaufen.
+WICHTIG: Unter dem Abschnitt 
+  packages:
+    remote_package:
+      ref: muss dev stehen statt main.
+
+### AB HIER KOPIEREN ###
+
+substitutions:
+
+###### CHANGE ME START ######
+
+  device_name: "<Panel Name>" 
+  wifi_ssid: "<WIFI Name>"
+  wifi_password: "<WIFI Passwort>"
+
+  nextion_update_url: "https://raw.githubusercontent.com/Blackymas/NSPanel_HA_Blueprint/main/nspanel_eu.tft" # URL to Github
+
+##### CHANGE ME END #####
+
+
+
+##### SPECIAL #####
+
+external_components:
+  - source: github://pr#2956
+    components: [nextion]
+    refresh: 1h
+
+##### SPECIAL END #####
+
+
+
+##### DO NOT CHANGE ANYTHING! #####
+
+packages:
+  ##### download esphome code from Github
+  remote_package:
+    url: https://github.com/Blackymas/NSPanel_HA_Blueprint
+    ref: dev
+    files: [nspanel_esphome.yaml]
+    refresh: 300s
+
+##### DO NOT CHANGE ANYTHING! #####
+
+
+Step 2:
+Entferne den SPECIAL Block und stelle das dev unten wieder zurück auf main.
+Nochmals installieren. Auch das sollte jetzt und ab jetzt für immer normal durchlaufen.
+
+h4v3 phun :)
